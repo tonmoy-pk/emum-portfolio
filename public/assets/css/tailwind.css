@@ -6,7 +6,3 @@
         @apply flex items-center justify-center;
     }
 }
-
-@theme {
-    --font-family-display: "Gentium Book Plus", "sans-serif";
-}
