@@ -1,38 +1,51 @@
 <template>
   <div class="app-container flex flex-col items-center justify-center mob:overflow-hidden">
-      <div class="w-full flex justify-center bg-[#F6F9FA]">
-        <Header class="max-w-[1920px] mob:max-w-[360px] w-full" />
+    <div class="w-full bg-[#F6F9FA] dark:bg-black flex justify-center flex-col hero-section">
+      <div class="w-full flex justify-center">
+        <Header
+            class="max-w-[1920px] mob:max-w-[360px] w-full"
+            @toggle-dark-mode="toggleColorMode"
+        />
       </div>
-      <div ref="homePage" class="w-full hero-section bg-[#F6F9FA] flex justify-center" id="homepage">
+      <div ref="homePage" class="w-full flex justify-center" id="homepage">
         <Homepage class="max-w-[1920px] mob:max-w-[360px] w-full" id="home"/>
       </div>
-      <div class="myWorld-section w-full bg-[#FFFFFF] flex justify-center">
+    </div>
+      <div class="myWorld-section w-full bg-[#FFFFFF] dark:bg-black flex justify-center">
         <MyWorld class="max-w-[1920px] mob:max-w-[360px] w-full" />
       </div>
-      <div ref="section1" class="journey-section bg-[#F6F9FA] flex w-full justify-center" id="business-journey">
+      <div ref="section1" class="journey-section bg-[#F6F9FA] dark:bg-black flex w-full justify-center" id="business-journey">
         <Journey class="max-w-[1920px] mob:max-w-[360px] w-full" />
       </div>
-      <div ref="section2" class="about-section bg-[#FFFFFF] w-full flex justify-center" id="about">
+      <div ref="section2" class="about-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center" id="about">
         <About class="max-w-[1920px] mob:max-w-[360px] w-full" />
       </div>
-      <div ref="section3" class="history-section bg-[#F6F9FA] w-full flex justify-center" id="short-history">
+      <div ref="section3" class="history-section bg-[#F6F9FA] dark:bg-black w-full flex justify-center" id="short-history">
         <History class="max-w-[1920px] mob:max-w-[360px] w-full" />
       </div>
-      <div ref="section4" class="gallery-section bg-[#FFFFFF] w-full flex justify-center" id="gallery">
+      <div ref="section4" class="gallery-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center" id="gallery">
         <Gallery class="max-w-[1920px] mob:max-w-[360px] w-full" />
       </div>
-      <div ref="section5" class="contact-section bg-[#F6F9FA] w-full flex justify-center" id="contact-me">
+      <div ref="section5" class="contact-section bg-[#F6F9FA] dark:bg-black w-full flex justify-center" id="contact-me">
         <Contact class="max-w-[1920px] mob:max-w-[360px] w-full" />
       </div>
-      <div class="footer-section bg-[#FFFFFF] w-full flex justify-center">
-       <Footer class="max-w-[1920px] mob:max-w-[360px] w-full" />
+      <div class="footer-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center">
+       <Footer class="max-w-[1920px] mob:max-w-[360px] w-full" @toggle-dark-mode="toggleColorMode" />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { useDark } from '@vueuse/core'
-const isDark = useDark();
+const darkMode = ref(false);
+
+const toggleColorMode = () => {
+  darkMode.value = !darkMode.value;
+  if (darkMode.value) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+}
 
 </script>
 
@@ -64,6 +77,9 @@ body {
   font-size: 30px;
   color: #000;
   font-weight: bold;
+}
+.backgroundDark {
+  background-image: url("./assets/images/background.jpg");
 }
 .button{
   background: linear-gradient(90deg, darkblue, blue);

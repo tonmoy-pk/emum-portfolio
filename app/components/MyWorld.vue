@@ -19,7 +19,7 @@
             fill="#147CD1"
           />
         </svg>
-        <h1 class="text-[48px] mob:text-center mob:text-[30px] mob:h-[64px] mob:leading-[36px] font-bold leading-[64px] text-[#262626] mob:w-[225px] mob:mt-[-6px]">
+        <h1 class="dark:text-[#D7D8DD] text-[48px] mob:text-center mob:text-[30px] mob:h-[64px] mob:leading-[36px] font-bold leading-[64px] text-[#262626] mob:w-[225px] mob:mt-[-6px]">
           Welcome To My World
         </h1>
         <svg
@@ -36,7 +36,7 @@
           />
         </svg>
       </div>
-      <p class="max-w-[1118px] text-center text-[24px] mob:text-[16px] mob:leading-[24px] font-light leading-[32px] text-[#565656]">
+      <p class="dark:text-[#D7D8DD] max-w-[1118px] text-center text-[24px] mob:text-[16px] mob:leading-[24px] font-light leading-[32px] text-[#565656]">
         Efficiency and precision are the cornerstone of a successful workflow,
         where collaboration and dedication intertwine to achieve outstanding results
       </p>
@@ -60,10 +60,10 @@
               stroke-linejoin="round"
             />
           </svg>
-          <p class="text-[40px] font-bold leading-[32px] text-[#262626] mob:text-[24px]">
+          <p class="text-[40px] font-bold leading-[32px] text-[#262626] mob:text-[24px] dark:text-[#D7D8DD]">
             Creativity
           </p>
-          <p class="text-[24px] leading-[32px] text-[#565656] mob:text-[16px] mob:leading-[24px]">
+          <p class="text-[24px] leading-[32px] text-[#565656] mob:text-[16px] mob:leading-[24px] dark:text-[#D7D8DD]">
             A businessman's creativity shines through in their capacity to ideate inventive strategies,
             navigating market dynamics with imaginative problem-solving for business growth.
           </p>
@@ -87,10 +87,10 @@
               stroke-linejoin="round"
             />
           </svg>
-          <p class="text-[40px] font-bold leading-[32px] text-[#262626] mob:text-[24px]">
+          <p class="text-[40px] font-bold leading-[32px] text-[#262626] mob:text-[24px] dark:text-[#D7D8DD]">
             Dedication
           </p>
-          <p class="text-[24px] leading-[32px] text-[#565656] mob:text-[16px] mob:leading-[24px]">
+          <p class="text-[24px] leading-[32px] text-[#565656] mob:text-[16px] mob:leading-[24px] dark:text-[#D7D8DD]">
             A businessman's dedication is exemplified through tireless efforts, long hours,
             and an unwavering commitment to the success and growth of their enterprise.
           </p>
@@ -114,10 +114,10 @@
               stroke-linejoin="round"
             />
           </svg>
-          <p class="text-[40px] font-bold leading-[32px] text-[#262626] mob:text-[24px]">
+          <p class="text-[40px] font-bold leading-[32px] text-[#262626] mob:text-[24px] dark:text-[#D7D8DD]">
             Hard Work
           </p>
-          <p class="text-[24px] leading-[32px] text-[#565656] mob:text-[16px] mob:leading-[24px]">
+          <p class="text-[24px] leading-[32px] text-[#565656] mob:text-[16px] mob:leading-[24px] dark:text-[#D7D8DD]">
             Hard work is cornerstone of a businessman's success, embodying persistent effort,
             resilience in adversity, an unyielding commitment to achieving & exceeding business objectives.
           </p>

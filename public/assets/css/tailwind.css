@@ -6,3 +6,8 @@
         @apply flex items-center justify-center;
     }
 }
+:root {
+    --primary-bg-color: #F6F9FA;
+    --secondary-bg-color: #FFFFFF;
+    --primary-header-color: #262626;
+}

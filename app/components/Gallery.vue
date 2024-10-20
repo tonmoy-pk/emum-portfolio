@@ -19,7 +19,7 @@
             fill="#147CD1"
           />
         </svg>
-        <h1 class="text-[48px] font-bold leading-[64px] text-[#262626] mob:text-center mob:text-[30px] mob:leading-[36px] mob:mt-[-6px]">
+        <h1 class="text-[48px] font-bold leading-[64px] dark:text-[#D7D8DD] text-[#262626] mob:text-center mob:text-[30px] mob:leading-[36px] mob:mt-[-6px]">
           My Gallery
         </h1>
         <svg
@@ -36,7 +36,7 @@
           />
         </svg>
       </div>
-      <p class="w-[1118px] text-center text-[24px] font-light leading-[32px] text-[#565656] mob:w-auto mob:text-[16px] mob:leading-[24px]">
+      <p class="w-[1118px] text-center text-[24px] font-light leading-[32px] dark:text-[#D7D8DD] text-[#565656] mob:w-auto mob:text-[16px] mob:leading-[24px]">
         My gallery showcases a vibrant tapestry of artistic expressions,
         featuring diverse creations that captivate and inspire.
       </p>
@@ -79,7 +79,7 @@
       </div>
     </div>
     <div class="w-[100%] flex justify-end">
-      <button class="flex items-center gap-[10px] leading-[24px] text-[16px] border-solid border-[1.5px] border-black px-[16px] py-[12px] mob:leading-[20px]">
+      <button class="flex items-center dark:text-[#D7D8DD] dark:border-[#D7D8DD] gap-[10px] leading-[24px] text-[16px] border-solid border-[1.5px] border-black px-[16px] py-[12px] mob:leading-[20px]">
         Explore Now
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -91,6 +91,7 @@
           <path
             d="M4.00016 4V5.33333H9.72683L3.3335 11.7267L4.2735 12.6667L10.6668 6.27333V12H12.0002V4H4.00016Z"
             fill="#262626"
+            class="dark:fill-[#D7D8DD]"
           />
         </svg>
       </button>

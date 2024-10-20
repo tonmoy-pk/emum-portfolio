@@ -1,10 +1,10 @@
 <template>
   <div class="flex items-center justify-center about-page-container px-[240px] py-[120px] mob:px-[16px] mob:py-[64px] mob:flex-col">
-    <div class="w-[54%] mob:mb-[16px] mob:w-full mob:px-[16px] mob:py-[32px] bg-[#F6F9FA] border-solid border-[1px] border-[#898989] px-[64px] py-[48px] flex flex-col z-10  gap-[24px]">
+    <div class="w-[54%] mob:mb-[16px] mob:w-full mob:px-[16px] dark:text-[#fff] mob:py-[32px] bg-[#F6F9FA] dark:bg-[#252525] border-solid border-[1px] border-[#898989] px-[64px] py-[48px] flex flex-col z-10  gap-[24px]">
       <h1 class="mob:text-[48px] mob:leading-[60px] text-[100px] font-bold leading-[120px]">
         About Me
       </h1>
-      <p class="mob:text-[16px] mob:leading-[24px] text-[24px] leading-[32px] text-[#565656]">
+      <p class="mob:text-[16px] mob:leading-[24px] text-[24px] leading-[32px] text-[#565656] dark:text-[#fff]">
         "In the dynamic canvas of business, strategic vision paints path forward, fueled by relentless determination.
         Collaboration beco brushstroke that colors innovation, while adaptability acts as the canvas that absorbs change.
         A decision is a stroke, shaping the masterpiece of success, and resilience serves as the frame,

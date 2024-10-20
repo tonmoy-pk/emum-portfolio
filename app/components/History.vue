@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col gap-[32px]">
+    <div class="flex flex-col gap-[32px] dark:text-[#D7D8DD]">
       <div class="flex flex-col gap-[24px] mob:gap-[12px]">
         <div class="flex items-center gap-[24px] mob:items-start mob:gap-[12px]">
           <svg
@@ -51,13 +51,13 @@
             />
           </svg>
         </div>
-        <div class="text-[24px] text-[#565656] leading-[32px] mob:text-[16px] mob:leading-[24px]">
+        <div class="text-[24px] dark:text-[#D7D8DD] text-[#565656] leading-[32px] mob:text-[16px] mob:leading-[24px]">
           Efficiency and precision are the cornerstone of a successful workflow, where collaboration and dedication intertwine to achieve outstanding results.Efficiency and precision are the cornerstone of a successful workflow,
           where collaboration and dedication intertwine to achieve outstanding results
         </div>
       </div>
       <div>
-        <button class="flex items-center gap-[10px] border-solid border-[1px] border-black px-[16px] py-[12px]">
+        <button class="flex items-center gap-[10px] border-solid border-[1px] dark:border-[#D7D8DD] border-black px-[16px] py-[12px]">
           <span class="text-[16px]">Read More</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +69,7 @@
             <path
               d="M4.00016 4V5.33333H9.72683L3.3335 11.7267L4.2735 12.6667L10.6668 6.27333V12H12.0002V4H4.00016Z"
               fill="#262626"
+              class="dark:fill-[#D7D8DD]"
             />
           </svg>
         </button>

@@ -5,8 +5,14 @@ export default {
     important: true
   },
   content: [],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'homepage-bg': "url('@/app/assets/images/background.jpg')",
+        'footer-texture': "url('@/assets/images/background.jpg')",
+      }
+    },
     fontFamily: {
       GBP: ['Gentium Book Plus', 'serif']
     },
