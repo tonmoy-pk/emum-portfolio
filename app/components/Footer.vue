@@ -1,12 +1,20 @@
 <script setup lang="ts">
-const emit = defineEmits(['toggleDarkMode'])
+const emit = defineEmits(['toggleDarkMode']);
 </script>
 
 <template>
   <div class="px-[240px] py-[32px] w-[1920px] flex justify-between items-center flex-col gap-[48px] relative mob:px-[16px] mob:py-[64px] mob:gap-[32px]">
     <div class="h-[60px] w-[142.5px]">
-      <img class="dark:hidden" src="../assets/images/img_1.png" alt="Loading....."/>
-      <img class="dark:flex hidden" src="../assets/images/Logo.png" alt="Loading....."/>
+      <img
+        class="dark:hidden"
+        src="../assets/images/img_1.png"
+        alt="Loading....."
+      >
+      <img
+        class="dark:flex hidden"
+        src="../assets/images/Logo.png"
+        alt="Loading....."
+      >
     </div>
     <div class="icon-container flex flex-col items-center justify-center gap-[32px] mob:gap-[16px]">
       <ul class="flex gap-[16px] mob:gap-[24px]">
@@ -37,7 +45,7 @@ const emit = defineEmits(['toggleDarkMode'])
             </defs>
           </svg>
         </li>
-        <li class="w-[1px] h-[25px] bg-gray-500"/>
+        <li class="w-[1px] h-[25px] bg-gray-500" />
         <li>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +62,7 @@ const emit = defineEmits(['toggleDarkMode'])
             />
           </svg>
         </li>
-        <li class="w-[1px] h-[25px] bg-gray-500"/>
+        <li class="w-[1px] h-[25px] bg-gray-500" />
         <li>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +89,7 @@ const emit = defineEmits(['toggleDarkMode'])
             />
           </svg>
         </li>
-        <li class="w-[1px] h-[25px] bg-gray-500"/>
+        <li class="w-[1px] h-[25px] bg-gray-500" />
         <li>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -99,13 +107,14 @@ const emit = defineEmits(['toggleDarkMode'])
           </svg>
         </li>
       </ul>
-      <div class="w-full bg-gray-500 h-[1px]"/>
+      <div class="w-full bg-gray-500 h-[1px]" />
       <div class="mob:text-[14px] dark:text-[#D7D8DD] leading-[20px]">
         Copyright @2024 <span class="text-blue-500">Techfes.com.</span> All right reserved.
       </div>
     </div>
-    <div class="toggle-container h-[44px] w-[88px] dark:bg-[#0B3558] p-[6px] flex gap-[12px] absolute right-[240px] top-[120px] mob:hidden"
-         @click="emit('toggleDarkMode')"
+    <div
+      class="toggle-container h-[44px] w-[88px] dark:bg-[#0B3558] p-[6px] flex gap-[12px] absolute right-[240px] top-[120px] mob:hidden"
+      @click="emit('toggleDarkMode')"
     >
       <div>
         <svg

@@ -1,23 +1,50 @@
 <script setup lang="ts">
+import { useIntersectionObserver } from '@vueuse/core';
 
+const isIntersecting = ref(false);
+const section = ref<HTMLElement>();
+const _option = ref<number>();
+
+const _observer = useIntersectionObserver(
+  section,
+  (option) => {
+    isIntersecting.value = !!option?.[0]?.isIntersecting;
+    _option.value = option?.[0]?.intersectionRatio;
+  },
+  {
+    threshold: Array.from({ length: 101 }, (_, i) => i / 100)
+  }
+);
+const transitionX = computed(() => {
+  return (!_option.value && _option.value !== 0) ? 0 : 1000 * (1 - _option.value);
+});
 </script>
 
 <template>
-  <div class="flex flex-col mob:px-[16px] mob:py-[64px] mob:gap-[32px] px-[485px] py-[120px] gap-[48px]">
-    <div class="mob:w-[328px] mob:h-[250px] flex w-[950px] h-[596px] relative">
-      <div class="mob:w-[300px] mob:h-[220px] image-wrapper w-[710px] h-[520px] relative z-0">
+  <div
+    class="flex flex-col mob:px-[16px] mob:py-[64px] mob:gap-[32px] px-[485px] py-[120px] gap-[48px]"
+  >
+    {{ `translateX(${isIntersecting? transitionX : 0}px)` }}
+    <div class="mob:w-[328px] mob:h-[250px] flex w-[950px] h-[596px] relative" ref="section">
+      <div
+        class="mob:w-[300px] mob:h-[220px] image-wrapper w-[710px] h-[520px] relative z-0 transition"
+        :style="{ transform: `translateX(-${isIntersecting? transitionX : 0}px)` }"
+      >
         <img
           src="../assets/images/img_9.png"
           alt="loading..."
         >
       </div>
-      <div class="w-[488px] h-[368px] mob:h-[172px] mob:w-[183px] mob:p-[16px] text-[64px] mob:text-[30px] mob:leading-[36px] leading-[64px] relative z-10 uppercase text-center p-[48px] bg-[#2E2F30] mob:ml-[-155px] ml-[-248px] text-[#FFF]">
+      <div
+        class="transition w-[488px] h-[368px] mob:h-[172px] mob:w-[183px] mob:p-[16px] text-[64px] mob:text-[30px] mob:leading-[36px] leading-[64px] relative z-10 uppercase text-center p-[48px] bg-[#2E2F30] mob:ml-[-155px] ml-[-248px] text-[#FFF]"
+        :style="{ transform: `translateX(${isIntersecting? transitionX : 0}px)` }"
+      >
         <h1 class="flex flex-wrap border-solid border-2 border-white items-center h-[100%] w-[100%]">
           Think outside the box
         </h1>
       </div>
     </div>
-
+    {{ transitionX }}
     <div class="flex flex-col gap-[32px] dark:text-[#D7D8DD]">
       <div class="flex flex-col gap-[24px] mob:gap-[12px]">
         <div class="flex items-center gap-[24px] mob:items-start mob:gap-[12px]">
@@ -77,3 +104,17 @@
     </div>
   </div>
 </template>
+
+<style lang="css" scoped>
+  .section-two-hidden {
+    transform: bind(transitionX);
+  }
+
+  .transition {
+    transition: opacity 0.1 ease-in-out, transform 0.1s ease-in-out;
+  }
+
+  .section-one-hidden {
+    transform: translateX(-1500px);
+  }
+</style>

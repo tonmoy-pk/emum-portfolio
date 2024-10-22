@@ -3,34 +3,64 @@
     <div class="w-full bg-[#F6F9FA] dark:bg-black flex justify-center flex-col hero-section">
       <div class="w-full flex justify-center">
         <Header
-            class="max-w-[1920px] mob:max-w-[360px] w-full"
-            @toggle-dark-mode="toggleColorMode"
+          class="max-w-[1920px] mob:max-w-[360px] w-full"
+          @toggle-dark-mode="toggleColorMode"
         />
       </div>
-      <div ref="homePage" class="w-full flex justify-center" id="homepage">
-        <Homepage class="max-w-[1920px] mob:max-w-[360px] w-full" id="home"/>
+      <div
+        id="homepage"
+        ref="homePage"
+        class="w-full flex justify-center"
+      >
+        <Homepage
+          id="home"
+          class="max-w-[1920px] mob:max-w-[360px] w-full"
+        />
       </div>
     </div>
-      <div class="myWorld-section w-full bg-[#FFFFFF] dark:bg-black flex justify-center">
-        <MyWorld class="max-w-[1920px] mob:max-w-[360px] w-full" />
-      </div>
-      <div ref="section1" class="journey-section bg-[#F6F9FA] dark:bg-black flex w-full justify-center" id="business-journey">
-        <Journey class="max-w-[1920px] mob:max-w-[360px] w-full" />
-      </div>
-      <div ref="section2" class="about-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center" id="about">
-        <About class="max-w-[1920px] mob:max-w-[360px] w-full" />
-      </div>
-      <div ref="section3" class="history-section bg-[#F6F9FA] dark:bg-black w-full flex justify-center" id="short-history">
-        <History class="max-w-[1920px] mob:max-w-[360px] w-full" />
-      </div>
-      <div ref="section4" class="gallery-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center" id="gallery">
-        <Gallery class="max-w-[1920px] mob:max-w-[360px] w-full" />
-      </div>
-      <div ref="section5" class="contact-section bg-[#F6F9FA] dark:bg-black w-full flex justify-center" id="contact-me">
-        <Contact class="max-w-[1920px] mob:max-w-[360px] w-full" />
-      </div>
-      <div class="footer-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center">
-       <Footer class="max-w-[1920px] mob:max-w-[360px] w-full" @toggle-dark-mode="toggleColorMode" />
+    <div class="myWorld-section w-full bg-[#FFFFFF] dark:bg-black flex justify-center">
+      <MyWorld class="max-w-[1920px] mob:max-w-[360px] w-full" />
+    </div>
+    <div
+      id="business-journey"
+      ref="section1"
+      class="journey-section bg-[#F6F9FA] dark:bg-black flex w-full justify-center"
+    >
+      <Journey class="max-w-[1920px] mob:max-w-[360px] w-full" />
+    </div>
+    <div
+      id="about"
+      ref="section2"
+      class="about-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center"
+    >
+      <About class="max-w-[1920px] mob:max-w-[360px] w-full" />
+    </div>
+    <div
+      id="short-history"
+      ref="section3"
+      class="history-section bg-[#F6F9FA] dark:bg-black w-full flex justify-center"
+    >
+      <History class="max-w-[1920px] mob:max-w-[360px] w-full" />
+    </div>
+    <div
+      id="gallery"
+      ref="section4"
+      class="gallery-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center"
+    >
+      <Gallery class="max-w-[1920px] mob:max-w-[360px] w-full" />
+    </div>
+    <div
+      id="contact-me"
+      ref="section5"
+      class="contact-section bg-[#F6F9FA] dark:bg-black w-full flex justify-center"
+    >
+      <Contact class="max-w-[1920px] mob:max-w-[360px] w-full" />
+    </div>
+    <div class="footer-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center">
+      <Footer
+        class="max-w-[1920px] mob:max-w-[360px] w-full"
+        @toggle-dark-mode="toggleColorMode"
+      />
     </div>
   </div>
 </template>
@@ -43,10 +73,9 @@ const toggleColorMode = () => {
   if (darkMode.value) {
     document.documentElement.classList.add('dark');
   } else {
-    document.documentElement.classList.remove('dark')
+    document.documentElement.classList.remove('dark');
   }
-}
-
+};
 </script>
 
 <style>
