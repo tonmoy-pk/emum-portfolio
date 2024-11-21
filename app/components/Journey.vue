@@ -77,8 +77,8 @@
                 With a commitment to excellence, Jicson brings the best of both worlds to its customers.
               </p>
             </div>
-            <div>
-              <button class="flex dark:text-[#D7D8DD] dark:border-[#D7D8DD] items-center gap-[10px] leading-[24px] text-[16px] border-solid border-[1px] border-black px-[16px] py-[12px]">
+            <div class="w-max hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-in-out">
+              <NuxtLink to="https://www.jicson.com/" target="_blank" class="flex dark:text-[#D7D8DD] dark:border-[#D7D8DD] items-center gap-[10px] leading-[24px] text-[16px] border-solid border-[1px] border-black px-[16px] py-[12px]">
                 Explore Now
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@
                     class="dark:fill-[#D7D8DD]"
                   />
                 </svg>
-              </button>
+              </NuxtLink>
             </div>
           </div>
           <svg
@@ -180,8 +180,8 @@
                 AC Service hopes is to achieve any challenging goal in the AC field.
               </p>
             </div>
-            <div>
-              <button class="flex items-center dark:text-[#D7D8DD] dark:border-[#D7D8DD] gap-[10px] leading-[24px] text-[16px] border-solid border-[1px] border-black px-[16px] py-[12px] mob:leading-[16px]">
+            <div class="w-max hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-in-out">
+              <NuxtLink to="https://www.acservicebd.com/" target="_blank" class="flex items-center dark:text-[#D7D8DD] dark:border-[#D7D8DD] gap-[10px] leading-[24px] text-[16px] border-solid border-[1px] border-black px-[16px] py-[12px] mob:leading-[16px]">
                 Explore Now
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +196,7 @@
                     class="dark:fill-[#D7D8DD]"
                   />
                 </svg>
-              </button>
+              </NuxtLink>
             </div>
           </div>
           <svg
@@ -355,8 +355,8 @@
                 and personalized travel itineraries.
               </p>
             </div>
-            <div>
-              <button class="flex dark:text-[#D7D8DD] dark:border-[#D7D8DD] items-center gap-[10px] leading-[24px] text-[16px] border-solid border-[1px] border-black px-[16px] py-[12px] mob:leading-[16px]">
+            <div class="w-max hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-in-out">
+              <NuxtLink to="https://www.jicsontravels.com/" target="_blank" class="flex dark:text-[#D7D8DD] dark:border-[#D7D8DD] items-center gap-[10px] leading-[24px] text-[16px] border-solid border-[1px] border-black px-[16px] py-[12px] mob:leading-[16px]">
                 Explore Now
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -371,7 +371,7 @@
                     class="dark:fill-[#D7D8DD]"
                   />
                 </svg>
-              </button>
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -454,8 +454,8 @@
                 fostering strong connections with vendors thousands of consumers across country.
               </p>
             </div>
-            <div>
-              <button class="mob:leading-[16px] dark:text-[#D7D8DD] dark:border-[#D7D8DD] flex items-center gap-[10px] leading-[24px] text-[16px] border-solid border-[1px] border-black px-[16px] py-[12px]">
+            <div class="w-max hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-in-out">
+              <NuxtLink to="https://www.ponnomela.com/" target="_blank" class="mob:leading-[16px] dark:text-[#D7D8DD] dark:border-[#D7D8DD] flex items-center gap-[10px] leading-[24px] text-[16px] border-solid border-[1px] border-black px-[16px] py-[12px]">
                 Explore Now
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -470,7 +470,7 @@
                     class="dark:fill-[#D7D8DD]"
                   />
                 </svg>
-              </button>
+              </NuxtLink>
             </div>
           </div>
         </div>

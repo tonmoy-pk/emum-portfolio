@@ -5,12 +5,46 @@ const section2 = ref<HTMLElement>();
 const section3 = ref<HTMLElement>();
 const section4 = ref<HTMLElement>();
 const section5 = ref<HTMLElement>();
-const windowWidth = ref(1400);
+// const windowWidth = ref(1400);
+const router = useRouter();
 const sections = ref<any[]>([]);
 const emit = defineEmits(['toggleDarkMode']);
 onMounted(() => {
   sections.value = [section1.value, section2.value, section3.value, section4.value, section5.value, homePage.value];
 })
+const showDropdown = ref(false);
+const items = ref([
+  {
+    name: 'Business Journey',
+    hash: '#business-journey'
+  },
+  {
+    name: 'About',
+    hash: '#about'
+  },
+  {
+    name: 'Gallery',
+    hash: '#gallery'
+  },
+  {
+    name: 'Short History',
+    hash: 'short-history'
+  },
+  {
+    name: 'Contact Me',
+    hash: '#contact-me'
+  }
+]);
+
+const toggleDropdown = () => {
+  showDropdown.value = !showDropdown.value;
+};
+
+const selectItem = (item: { name: string, hash: string }) => {
+  if (item.hash) {
+    router.push({ hash: item.hash });
+  }
+};
 </script>
 
 <template>
@@ -24,16 +58,34 @@ onMounted(() => {
     </div>
     <div class="options-container flex gap-[40px] items-center mob:gap-[24px] desk3:gap-[24px] tab:gap-[24px]">
       <div class="dark:text-[#D7D8DD] list-container flex items-center text-[24px] gap-[40px] desk3:hidden tab:hidden mob:hidden">
-        <span class="cursor-pointer"><NuxtLink to="business-journey">Business Journey</NuxtLink></span>
-        <span class="cursor-pointer"><NuxtLink to="about">About</NuxtLink></span>
-        <span class="cursor-pointer"><NuxtLink to="short-story">Short History</NuxtLink></span>
-        <span class="cursor-pointer"><NuxtLink to="gallery">Gallery</NuxtLink></span>
-        <span class="cursor-pointer"><NuxtLink to="contact-me">Contact Me</NuxtLink></span>
+        <span class="menu-item cursor-pointer"><NuxtLink to="#business-journey">Business Journey</NuxtLink></span>
+        <span class="menu-item cursor-pointer"><NuxtLink to="#about">About</NuxtLink></span>
+        <span class="menu-item cursor-pointer"><NuxtLink to="#short-history">Short History</NuxtLink></span>
+        <span class="menu-item cursor-pointer"><NuxtLink to="#gallery">Gallery</NuxtLink></span>
+        <span class="menu-item cursor-pointer"><NuxtLink to="#contact-me">Contact Me</NuxtLink></span>
       </div>
-      <div class="hidden desk3:flex tab:flex mob:flex">
+      <div class="hidden desk3:flex tab:flex mob:flex" @click="toggleDropdown">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path d="M3 12H21M3 6H21M3 18H21" stroke="#262626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+        <transition name="dropdown">
+          <div
+              v-if="showDropdown"
+              class="absolute top-12 right-[88px] mt-2 w-56 bg-white border border-gray-300 rounded-lg shadow-xl z-50"
+          >
+            <ul class="py-2 px-4">
+              <li
+                  v-for="item in items"
+                  :key="item"
+                  @click="selectItem(item)"
+                  class="px-4 py-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 cursor-pointer rounded-md transition-colors duration-200 ease-in-out"
+              >
+                {{ item.name }}
+              </li>
+            </ul>
+          </div>
+        </transition>
+
       </div>
       <div
           class="toggle-container h-[44px] w-[88px] p-[6px] flex gap-[12px] dark:bg-[#0B3558]"
@@ -63,28 +115,56 @@ onMounted(() => {
   </div>
 </template>
 
-<!--<style scoped>-->
-<!--@media screen and (max-width: 1650px) and (min-width: 1501px){-->
-<!--  .header-section {-->
-<!--    padding: 24px 200px;-->
-<!--  }-->
-<!--}-->
-<!--@media screen and (max-width: 1500px) and (min-width: 1401px){-->
-<!--  .header-section {-->
-<!--    padding: 24px 160px;-->
-<!--  }-->
-<!--}-->
-<!--@media screen and (max-width: 1400px) and (min-width: 1301px){-->
-<!--  .header-section {-->
-<!--    padding: 24px 100px;-->
-<!--  }-->
-<!--}-->
-<!--@media screen and (max-width: 1300px){-->
-<!--  .header-section {-->
-<!--    padding: 24px 60px;-->
-<!--  }-->
-<!--  .options-container {-->
-<!--    gap: 15px;-->
-<!--  }-->
-<!--}-->
-<!--</style>-->
+<style scoped>
+.menu-item {
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+  line-height: 1;
+}
+
+.menu-item:hover {
+  color: #007BFF;
+  transform: scale(1.1);
+}
+
+.menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #007BFF;
+  transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
+.menu-item {
+  display: inline-block;
+  padding-bottom: 4px;
+}
+</style>
+
+<style scoped>
+.dropdown-enter-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-enter-from {
+  opacity: 0;
+  transform: translateY(-10px); /* Slide in from above */
+}
+
+.dropdown-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-leave-to {
+  opacity: 0;
+  transform: translateY(-10px); /* Slide out upwards */
+}
+</style>
+
+

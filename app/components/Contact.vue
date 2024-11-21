@@ -23,7 +23,7 @@ const formPhone = ref<number>();
               v-model="formName"
               name="name"
               type="text"
-              class="mob:text-[16px] dark:text-[#D7D8DD] dark:bg-black mob:leading-[32px] block w-full text-[20px] leading-[42px] border-0 border-b border-gray-400 focus:outline-none bg-[#F6F9FA] focus:ring-0"
+              class="mob:text-[16px] dark:text-[#D7D8DD] dark:bg-transparent mob:leading-[32px] block w-full text-[20px] leading-[42px] border-0 border-b border-gray-400 focus:outline-none bg-[#F6F9FA] focus:ring-0"
               placeholder="Enter Your Name"
             >
           </div>
@@ -33,7 +33,7 @@ const formPhone = ref<number>();
               v-model="formEmail"
               name="email"
               type="email"
-              class="mob:text-[16px] dark:text-[#D7D8DD] dark:bg-black mob:leading-[32px] block w-full text-[20px] leading-[42px] border-0 border-b border-gray-400 bg-[#F6F9FA] focus:outline-none focus:ring-0"
+              class="mob:text-[16px] dark:text-[#D7D8DD] dark:bg-transparent mob:leading-[32px] block w-full text-[20px] leading-[42px] border-0 border-b border-gray-400 bg-[#F6F9FA] focus:outline-none focus:ring-0"
               placeholder="Enter Your Email"
             >
           </div>
@@ -43,14 +43,14 @@ const formPhone = ref<number>();
               v-model="formPhone"
               name="phone"
               type="number"
-              class="mob:text-[16px] dark:text-[#D7D8DD] dark:bg-black mob:leading-[32px] block w-full text-[20px] leading-[42px] bg-[#F6F9FA] border-0 border-b border-gray-400 focus:outline-none focus:ring-0"
+              class="mob:text-[16px] dark:text-[#D7D8DD] dark:bg-transparent mob:leading-[32px] block w-full text-[20px] leading-[42px] bg-[#F6F9FA] border-0 border-b border-gray-400 focus:outline-none focus:ring-0"
               placeholder="Enter Your Phone"
             >
           </div>
           <div class="flex flex-col py-[16px] border-b border-gray-400">
             <textarea
               placeholder="Leave a Message for Me"
-              class="mob:text-[16px] mob:leading-[32px] dark:text-[#D7D8DD] dark:bg-black block h-[44px] text-[20px] w-full bg-[#F6F9FA] border-0 focus:outline-none focus:ring-0"
+              class="mob:text-[16px] mob:leading-[32px] dark:text-[#D7D8DD] dark:bg-transparent block h-[44px] text-[20px] w-full bg-[#F6F9FA] border-0 focus:outline-none focus:ring-0"
             />
           </div>
         </div>

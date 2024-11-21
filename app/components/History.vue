@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+const openModal = ref(false);
 </script>
 
 <template>
@@ -57,7 +57,7 @@
         </div>
       </div>
       <div>
-        <button class="flex items-center gap-[10px] border-solid border-[1px] dark:border-[#D7D8DD] border-black px-[16px] py-[12px]">
+        <button @click="openModal=true" class="flex items-center gap-[10px] border-solid border-[1px] dark:border-[#D7D8DD] border-black px-[16px] py-[12px]">
           <span class="text-[16px]">Read More</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -74,6 +74,9 @@
           </svg>
         </button>
       </div>
+    </div>
+    <div v-if="openModal">
+      <CommonModal v-model="openModal"/>
     </div>
   </div>
 </template>

@@ -79,7 +79,7 @@
       </div>
     </div>
     <div class="w-[100%] flex justify-end">
-      <button class="flex items-center dark:text-[#D7D8DD] dark:border-[#D7D8DD] gap-[10px] leading-[24px] text-[16px] border-solid border-[1.5px] border-black px-[16px] py-[12px] mob:leading-[20px]">
+      <button @click="navigateTo('/my-gallery')" class="flex items-center dark:text-[#D7D8DD] dark:border-[#D7D8DD] gap-[10px] leading-[24px] text-[16px] border-solid border-[1.5px] border-black px-[16px] py-[12px] mob:leading-[20px]">
         Explore Now
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -116,9 +116,9 @@
         </li>
       </ul>
     </div>
-    <div class="w-[818.5px] h-[889.5px] flex desk1:h-[800px] desk1:w-[736px] desk2:h-[711px] desk2:w-[654px] desk3:h-[622px] desk3:w-[572px] tab:w-[491px] tab:h-[533px] mob:w-[291px] mob:h-[315px]">
+    <div class="w-auto h-auto flex desk1:h-[800px] desk1:w-[736px] desk2:h-[711px] desk2:w-[654px] desk3:h-[622px] desk3:w-[572px] tab:w-[491px] tab:h-[533px] mob:w-[291px] mob:h-[315px]">
       <img
-        src="../assets/images/img.png"
+        src="../assets/images/emam1.png"
         alt="Loading..."
         class="w-[100%] h-[100%]"
       >
@@ -140,7 +140,7 @@
           In the ever-changing business landscape, adaptability is the key to sustained growth."
         </div>
         <div>
-          <button class="dark:border-[#D7D8DD] flex mob:px-[24px] mob:py-[12px] gap-[10px] items-center border-solid border-[.5px] border-[#262626] font-normal text-[20px] leading-[28px] px-[40px] py-[16px]">
+          <button class="hover:bg-gray-500 hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-in-out dark:border-[#D7D8DD] flex mob:px-[24px] mob:py-[12px] gap-[10px] items-center border-solid border-[.5px] border-[#262626] font-normal text-[20px] leading-[28px] px-[40px] py-[16px]">
             <span class="text-[20px] leading-[16px]">Contact Me</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
               <path class="dark:fill-[#D7D8DD]" d="M4.00016 4.875V6.20833H9.72683L3.3335 12.6017L4.2735 13.5417L10.6668 7.14833V12.875H12.0002V4.875H4.00016Z" fill="#262626"/>
@@ -153,37 +153,11 @@
 </template>
 
 <style scoped>
-@media screen and (max-width: 1900px) and (min-width: 1701px){
-  .homepage-body-container {
-    padding: 34px 200px;
-  }
-  .title-name {
-    font-size: 140px;
-  }
-  .title-surname {
-    font-size: 110px;
-  }
+.hover\:bg-blue-100:hover {
+  background-color: #e0f7fa; /* Add light blue background on hover */
 }
-@media screen and (max-width: 1700px) and (min-width: 1401px){
-  .homepage-body-container {
-    padding: 34px 160px;
-  }
-  .title-name {
-    font-size: 120px;
-  }
-  .title-surname {
-    font-size: 90px;
-  }
+.hover\:text-blue-700:hover {
+  color: #1976d2; /* Change text color to blue on hover */
 }
-@media screen and (max-width: 1400px) and (min-width: 1301px){
-  .homepage-body-container {
-    padding: 34px 100px;
-  }
-  .title-name {
-    font-size: 110px;
-  }
-  .title-surname {
-    font-size: 80px;
-  }
-}
+
 </style>
