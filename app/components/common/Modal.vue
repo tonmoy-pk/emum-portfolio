@@ -21,7 +21,7 @@ function closeModal() {
 
 
 <template>
-  <div v-if="openModal" class="modal-overlay mob:h-[100px] mob:w-[500px]">
+  <div v-if="openModal" class="modal-overlay mob:h-[100px] mob:max-w-[500px]">
     <div class="modal-content dark:bg-gray-900 bg-white flex flex-col justify-center items-center gap-[30px] px-[80px] py-[40px] dark:text-white" @click.stop>
       <div class="relative"><span class="absolute h-[50px] w-[50px] text-4xl font-light flex justify-center items-center rounded-[30px] pb-[2px] left-[27rem] bottom-[-2rem] cursor-pointer border-b border-gray-600 text-gray-500 border-2 bg-gray" @click="openModal=false">x</span></div>
       <h3 v-if="!noHeader" class="text-6xl">{{ headerText }}</h3>
@@ -29,7 +29,6 @@ function closeModal() {
         Aperiam commodi culpa eaque eos ex facilis, harum illum incidunt iste maiores mollitia nobis pariatur quo totam
         voluptatum! Aliquam culpa nulla sequi!</p>
       <img v-if="imageUrl" :src="imageUrl" alt="loading" class="rounded"/>
-<!--      <button class="rounded h-[20px] w-[40px] bg-red" @click="closeModal">Close</button>-->
     </div>
   </div>
 </template>
@@ -46,7 +45,7 @@ function closeModal() {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 100000000000000000000000000000;
 }
 
 .modal-content {

@@ -78,7 +78,12 @@
               </p>
             </div>
             <div class="w-max hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-in-out">
-              <NuxtLink to="https://www.jicson.com/" target="_blank" class="flex dark:text-[#D7D8DD] dark:border-[#D7D8DD] items-center gap-[10px] leading-[24px] text-[16px] border-solid border-[1px] border-black px-[16px] py-[12px]">
+              <NuxtLink
+                  to="https://www.jicson.com/"
+                  target="_blank"
+                  class="flex dark:text-[#D7D8DD] dark:border-[#D7D8DD] items-center gap-[10px] leading-[24px] text-[16px]
+                  border-solid border-[1px] border-black px-[16px] py-[12px] mob:leading-[16px]"
+              >
                 Explore Now
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

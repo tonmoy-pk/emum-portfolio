@@ -1,5 +1,10 @@
 <template>
+  <NuxtLayout />
   <NuxtPage />
+<!--  <div class="w-screen max-w-[1920px] flex justify-center">-->
+<!--    <NuxtLayout />-->
+<!--    <NuxtPage />-->
+<!--  </div>-->
 </template>
 
 <style>
@@ -54,3 +59,5 @@ input {
   display: none;
 }
 </style>
+<script setup lang="ts">
+</script>

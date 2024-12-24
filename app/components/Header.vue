@@ -35,7 +35,15 @@ const items = ref([
     hash: '#contact-me'
   }
 ]);
-
+const darkMode = ref(false);
+const toggleColorMode = () => {
+  darkMode.value = !darkMode.value;
+  if (darkMode.value) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+}
 const toggleDropdown = () => {
   showDropdown.value = !showDropdown.value;
 };
@@ -45,53 +53,54 @@ const selectItem = (item: { name: string, hash: string }) => {
     router.push({ hash: item.hash });
   }
 };
+// onMounted(() => console.log('hello'));
 </script>
 
 <template>
   <div class="desk3:px-[128px] tab:px-[64px] mob:px-[16px] mob:py-[8px] mob:max-w-[360px]
    desk2:px-[128px] desk1:px-[180px] px-[240px] header-section
     py-[24px] flex justify-between items-center "
-  >
-    <div class="h-[60px] w-[142.5px] mob:w-[95px] mob:h-[40px]">
-      <img class="dark:hidden" src="../assets/images/img_1.png" alt="Loading....."/>
-      <img class="dark:flex hidden" src="../assets/images/Logo.png" alt="Loading....."/>
-    </div>
-    <div class="options-container flex gap-[40px] items-center mob:gap-[24px] desk3:gap-[24px] tab:gap-[24px]">
-      <div class="dark:text-[#D7D8DD] list-container flex items-center text-[24px] gap-[40px] desk3:hidden tab:hidden mob:hidden">
-        <span class="menu-item cursor-pointer"><NuxtLink to="#business-journey">Business Journey</NuxtLink></span>
-        <span class="menu-item cursor-pointer"><NuxtLink to="#about">About</NuxtLink></span>
-        <span class="menu-item cursor-pointer"><NuxtLink to="#short-history">Short History</NuxtLink></span>
-        <span class="menu-item cursor-pointer"><NuxtLink to="#gallery">Gallery</NuxtLink></span>
-        <span class="menu-item cursor-pointer"><NuxtLink to="#contact-me">Contact Me</NuxtLink></span>
+    >
+      <div class="h-[60px] w-[142.5px] mob:w-[95px] mob:h-[40px]">
+        <img class="dark:hidden" src="../assets/images/img_1.png" alt="Loading....."/>
+        <img class="dark:flex hidden" src="../assets/images/Logo.png" alt="Loading....."/>
       </div>
-      <div class="hidden desk3:flex tab:flex mob:flex" @click="toggleDropdown">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M3 12H21M3 6H21M3 18H21" stroke="#262626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <transition name="dropdown">
-          <div
-              v-if="showDropdown"
-              class="absolute top-12 right-[88px] mt-2 w-56 bg-white border border-gray-300 rounded-lg shadow-xl z-50"
-          >
-            <ul class="py-2 px-4">
-              <li
-                  v-for="item in items"
-                  :key="item"
-                  @click="selectItem(item)"
-                  class="px-4 py-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 cursor-pointer rounded-md transition-colors duration-200 ease-in-out"
-              >
-                {{ item.name }}
-              </li>
-            </ul>
-          </div>
-        </transition>
+      <div class="options-container flex gap-[40px] items-center mob:gap-[24px] desk3:gap-[24px] tab:gap-[24px]">
+        <div class="dark:text-[#D7D8DD] list-container flex items-center text-[24px] gap-[40px] desk3:hidden tab:hidden mob:hidden">
+          <span class="menu-item cursor-pointer"><NuxtLink to="#business-journey">Business Journey</NuxtLink></span>
+          <span class="menu-item cursor-pointer"><NuxtLink to="#about">About</NuxtLink></span>
+          <span class="menu-item cursor-pointer"><NuxtLink to="#short-history">Short History</NuxtLink></span>
+          <span class="menu-item cursor-pointer"><NuxtLink to="#gallery">Gallery</NuxtLink></span>
+          <span class="menu-item cursor-pointer"><NuxtLink to="#contact-me">Contact Me</NuxtLink></span>
+        </div>
+        <div class="hidden desk3:flex tab:flex mob:flex" @click="toggleDropdown">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="#262626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <transition name="dropdown">
+            <div
+                v-if="showDropdown"
+                class="absolute dark:bg-gray-950 top-12 right-[88px] mt-2 w-56 border border-gray-300 rounded-lg shadow-xl z-50"
+            >
+              <ul class="py-2 px-4">
+                <li
+                    v-for="item in items"
+                    :key="item"
+                    @click="selectItem(item)"
+                    class="px-4 py-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 cursor-pointer rounded-md transition-colors duration-200 ease-in-out"
+                >
+                  {{ item.name }}
+                </li>
+              </ul>
+            </div>
+          </transition>
 
-      </div>
-      <div
-          class="toggle-container h-[44px] w-[88px] p-[6px] flex gap-[12px] dark:bg-[#0B3558]"
-          @click="emit('toggleDarkMode')"
-      >
-        <div>
+        </div>
+        <div
+            class="toggle-container h-[44px] w-[88px] p-[6px] flex gap-[12px] dark:bg-[#0B3558]"
+            @click="toggleColorMode"
+        >
+          <div>
             <svg class="bg-[#147CD1] rounded-[20px]" xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 32 32" fill="none">
             <path d="M14.0642 7.65264L14.1401 7.75193C14.2294 7.68365 14.3108 7.5977 14.3514 7.48923C14.394 7.37542 14.3859 7.25236 14.3234 7.12691L14.3234 7.12681C14.2625 7.00468 14.1706 6.92739 14.0576 6.89403C13.9502 6.86228 13.8367 6.87412 13.7336 6.90128L13.7335 6.9013C12.7664 7.15686 11.8271 7.50898 10.9856 8.07597L10.9856 8.07597C8.30958 9.87937 6.96305 12.4211 6.87506 15.3689L6.87495 15.3689L6.87501 15.374C6.89556 17.2391 7.29714 18.7302 8.09469 20.1212C9.91839 23.302 13.6263 25.1065 17.2383 24.4849C20.4307 23.9355 22.7273 22.1651 24.0768 19.2047L24.0768 19.2047C24.1472 19.0501 24.1887 18.9121 24.1818 18.7895C24.1742 18.6555 24.11 18.5543 24.006 18.4799L24.0059 18.4798C23.898 18.4028 23.7792 18.3713 23.6462 18.4046C23.5241 18.4351 23.4033 18.5172 23.2749 18.6315C23.27 18.6356 23.2659 18.6395 23.2629 18.6423L23.2568 18.648C23.2566 18.6483 23.2563 18.6485 23.2561 18.6487C22.1187 19.6684 20.8056 20.2971 19.2851 20.4599L19.285 20.4599C17.5131 20.6499 15.875 20.2632 14.4179 19.2421L14.4179 19.2421C12.9016 18.1798 11.917 16.7381 11.5248 14.9183C11.19 13.3638 11.3402 11.857 12.0065 10.4071L12.0065 10.4071C12.4953 9.34352 13.2124 8.46448 14.1403 7.75178L14.0642 7.65264ZM14.0642 7.65264C13.1209 8.37714 12.3906 9.27203 11.893 10.3549L23.357 18.7257C23.6065 18.5034 23.7674 18.4632 23.9333 18.5816C24.0874 18.6918 24.0991 18.8541 23.9631 19.1528C22.6307 22.0757 20.3686 23.8194 17.2171 24.3617C13.6583 24.9741 10.0015 23.1957 8.20313 20.059C7.41716 18.6882 7.02034 17.2184 7 15.3726C7.08678 12.4656 8.41239 9.96082 11.0555 8.17963C11.8812 7.62327 12.8059 7.27571 13.7654 7.02215C13.9489 6.97379 14.118 6.99504 14.2115 7.1826C14.3092 7.37875 14.2237 7.53061 14.0642 7.65264ZM12.8552 19.1579L12.8552 19.1579C15.112 21.4024 18.8924 22.2436 22.2286 20.5194C20.7123 22.5954 17.6427 24.2092 14.2227 23.5049C10.6012 22.759 7.92361 19.5728 7.81238 15.8985L7.81238 15.8985C7.70723 12.4323 9.74593 9.71612 12.0514 8.5457C10.8915 10.1025 10.3537 11.8338 10.4393 13.7633C10.533 15.8755 11.361 17.6715 12.8552 19.1579Z" fill="white" stroke="white" stroke-width="0.25"/>
           </svg>
