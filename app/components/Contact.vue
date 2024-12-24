@@ -57,7 +57,8 @@ const formPhone = ref<number>();
       </div>
 
       <div>
-        <button class="flex border-solid border-[.5px] dark:text-[#D7D8DD] dark:border-[#D7D8DD] border-black px-[24px] py-[16px] items-center gap-[10px] mob:py-[12px] mob:gap-[8px]">
+        <button class="hover:scale-105 hover:shadow-lg transition-transform duration-200
+    ease-in-out hover:bg-blue-700 hover:text-white flex border-solid border-[.5px] dark:text-[#D7D8DD] dark:border-[#D7D8DD] border-black px-[24px] py-[16px] items-center gap-[10px] mob:py-[12px] mob:gap-[8px]">
           <span class="text-[24px] mob:text-[16px] mob:leading-[24px]">Send Message</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

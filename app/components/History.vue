@@ -57,7 +57,8 @@ const openModal = ref(false);
         </div>
       </div>
       <div>
-        <button @click="openModal=true" class="flex items-center gap-[10px] border-solid border-[1px] dark:border-[#D7D8DD] border-black px-[16px] py-[12px]">
+        <button @click="openModal=true" class="parent hover:scale-105 hover:shadow-lg transition-transform duration-200
+    ease-in-out hover:bg-blue-700 hover:text-white flex items-center gap-[10px] border-solid border-[1px] dark:border-[#D7D8DD] border-black px-[16px] py-[12px]">
           <span class="text-[16px]">Read More</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +70,7 @@ const openModal = ref(false);
             <path
               d="M4.00016 4V5.33333H9.72683L3.3335 11.7267L4.2735 12.6667L10.6668 6.27333V12H12.0002V4H4.00016Z"
               fill="#262626"
-              class="dark:fill-[#D7D8DD]"
+              class="dark:fill-[#D7D8DD] parent-hover:fill-white"
             />
           </svg>
         </button>

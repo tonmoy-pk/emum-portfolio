@@ -20,8 +20,9 @@ const sections: Sections = {
   gallery: ref(null),
   contactMe: ref(null)
 };
-const noHeader = ref(null);
-const modalData = ref('');
+const noHeader = ref(false);
+const headerText = ref();
+const imageUrl = ref();
 const openModal = ref(false);
 const toggleColorMode = () => {
   darkMode.value = !darkMode.value;
@@ -31,11 +32,16 @@ const toggleColorMode = () => {
     document.documentElement.classList.remove('dark')
   }
 }
+const handleOpenImage = (event: {path: string}) => {
+  openModal.value = true;
+  imageUrl.value = event.path;
+  noHeader.value = true;
+}
 
 </script>
 
 <template>
-  <div class="app-container flex flex-col items-center justify-center mob:overflow-hidden">
+  <div class="flex flex-col mob:pt-[60px] pt-[108px] items-center justify-center mob:overflow-hidden">
     <div :ref="sections.home" id="home" class="pt-[108px] w-full bg-[#F6F9FA] dark:bg-[url('~/assets/images/background.jpg')] flex justify-center flex-col hero-section">
       <div class="w-full flex justify-center">
         <Homepage class="max-w-[1920px] mob:max-w-[360px] w-full" />
@@ -54,21 +60,24 @@ const toggleColorMode = () => {
       <History class="max-w-[1920px] mob:max-w-[360px] w-full" />
     </div>
     <div :ref="sections.gallery" class="gallery-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center" id="gallery">
-      <Gallery class="max-w-[1920px] mob:max-w-[360px] w-full" />
+      <Gallery
+          class="max-w-[1920px] mob:max-w-[360px] w-full"
+          @open-image="handleOpenImage"
+      />
     </div>
-    <div :ref="sections.contactMe" class="contact-section bg-[#F6F9FA] flex-col dark:bg-cover dark:bg-[url('~/assets/images/background2.png')] w-full flex justify-center" id="contact-me">
+    <div :ref="sections.contactMe" class="bg-[#F6F9FA] flex-col dark:bg-cover dark:bg-[url('~/assets/images/background2.png')] w-full flex justify-center items-center" id="contact-me">
       <Contact class="max-w-[1920px] mob:max-w-[360px] w-full" />
       <div class="footer-section bg-[#FFFFFF] dark:bg-transparent w-full flex justify-center">
         <Footer class="max-w-[1920px] mob:max-w-[360px] w-full" @toggle-dark-mode="toggleColorMode" />
       </div>
     </div>
-<!--    <CommonModal-->
-<!--        :no-header="noHeader"-->
-<!--        :header-text="modalData"-->
-<!--    />-->
-    <div v-if="openModal">
-      <CommonModal v-model="openModal"/>
-    </div>
+    <CommonModal
+        v-if="openModal"
+        v-model="openModal"
+        :no-header="noHeader"
+        :header-text="headerText"
+        :image-url="imageUrl"
+    />
   </div>
 </template>
 

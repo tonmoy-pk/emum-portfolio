@@ -11,7 +11,7 @@ const emit = defineEmits(['clickButton']);
 
 <template>
   <button class="w-max hover:scale-105 hover:shadow-lg transition-transform duration-200
-    ease-in-out flex items-center dark:text-[#D7D8DD] dark:border-[#D7D8DD] gap-[10px] leading-[24px]
+    ease-in-out hover:bg-blue-700 hover:text-white flex items-center dark:text-[#D7D8DD] dark:border-[#D7D8DD] gap-[10px] leading-[24px]
     text-[16px] border-solid border-[1.5px] border-black px-[16px] py-[12px] mob:leading-[20px]"
           @click="emit('clickButton')"
   >

@@ -143,7 +143,7 @@ import 'animate.css';
           In the ever-changing business landscape, adaptability is the key to sustained growth."
         </div>
         <div>
-          <button class="hover:bg-gray-500 hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-in-out dark:border-[#D7D8DD] flex mob:px-[24px] mob:py-[12px] gap-[10px] items-center border-solid border-[.5px] border-[#262626] font-normal text-[20px] leading-[28px] px-[40px] py-[16px]">
+          <button class="hover:bg-blue-700 hover:text-white hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-in-out dark:border-[#D7D8DD] flex mob:px-[24px] mob:py-[12px] gap-[10px] items-center border-solid border-[.5px] border-[#262626] font-normal text-[20px] leading-[28px] px-[40px] py-[16px]">
             <span class="text-[20px] leading-[16px]">Contact Me</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
               <path class="dark:fill-[#D7D8DD]" d="M4.00016 4.875V6.20833H9.72683L3.3335 12.6017L4.2735 13.5417L10.6668 7.14833V12.875H12.0002V4.875H4.00016Z" fill="#262626"/>
