@@ -2,7 +2,7 @@
 const emit = defineEmits(['openImage']);
 const onSubmit = () => {
   navigateTo('/my-gallery');
-}
+};
 </script>
 
 <template>
@@ -45,35 +45,50 @@ const onSubmit = () => {
       </p>
     </div>
     <div class="grid gap-[24px] grid-cols-4 grid-rows-2 mob:grid-cols-2 mob:grid-rows-4 mob:gap-[16px]">
-      <div class="cursor-pointer row-start-1 row-end-3 col-start-1 col-end-3" @click="emit('openImage', { path: '~/assets/images/Gallery/img.png' })">
+      <div
+        class="cursor-pointer row-start-1 row-end-3 col-start-1 col-end-3"
+        @click="emit('openImage', { path: '~/assets/images/Gallery/img.png' })"
+      >
         <img
           src="~/assets/images/Gallery/img.png"
           alt="loading..."
           class="w-[100%] h-[100%]"
         >
       </div>
-      <div class="cursor-pointer row-start-1 row-end-2 col-start-3 col-end-4 mob:row-start-3 mob:row-end-4 mob:col-start-1 mob:col-end-2" @click="emit('openImage', { path: '~/assets/images/Gallery/img_1.png' })">
+      <div
+        class="cursor-pointer row-start-1 row-end-2 col-start-3 col-end-4 mob:row-start-3 mob:row-end-4 mob:col-start-1 mob:col-end-2"
+        @click="emit('openImage', { path: '~/assets/images/Gallery/img_1.png' })"
+      >
         <img
           src="~/assets/images/Gallery/img_1.png"
           alt="loading..."
           class="w-[100%] h-[100%]"
         >
       </div>
-      <div class="cursor-pointer row-start-1 row-end-2 col-start-4 col-end-5 mob:row-start-3 mob:row-end-4 mob:col-start-2 mob:col-end-3" @click="emit('openImage', { path: '~/assets/images/Gallery/img_2.png' })">
+      <div
+        class="cursor-pointer row-start-1 row-end-2 col-start-4 col-end-5 mob:row-start-3 mob:row-end-4 mob:col-start-2 mob:col-end-3"
+        @click="emit('openImage', { path: '~/assets/images/Gallery/img_2.png' })"
+      >
         <img
           src="~/assets/images/Gallery/img_2.png"
           alt="loading..."
           class="w-[100%] h-[100%]"
         >
       </div>
-      <div class="cursor-pointer row-start-2 row-end-3 col-start-3 col-end-4 mob:row-start-4 mob:row-end-5 mob:col-start-1 mob:col-end-2" @click="emit('openImage', { path: '~/assets/images/Gallery/img_3.png' })">
+      <div
+        class="cursor-pointer row-start-2 row-end-3 col-start-3 col-end-4 mob:row-start-4 mob:row-end-5 mob:col-start-1 mob:col-end-2"
+        @click="emit('openImage', { path: '~/assets/images/Gallery/img_3.png' })"
+      >
         <img
           src="~/assets/images/Gallery/img_3.png"
           alt="loading..."
           class=" w-[100%] h-[100%]"
         >
       </div>
-      <div class="cursor-pointer row-start-2 row-end-3 col-start-4 col-end-5 mob:row-start-4 mob:row-end-5 mob:col-start-2 mob:col-end-3" @click="emit('openImage', { path: '~/assets/images/Gallery/img_4.png' })">
+      <div
+        class="cursor-pointer row-start-2 row-end-3 col-start-4 col-end-5 mob:row-start-4 mob:row-end-5 mob:col-start-2 mob:col-end-3"
+        @click="emit('openImage', { path: '~/assets/images/Gallery/img_4.png' })"
+      >
         <img
           src="~/assets/images/Gallery/img_4.png"
           alt="loading..."
@@ -82,7 +97,7 @@ const onSubmit = () => {
       </div>
     </div>
     <div class="w-[100%] flex justify-end">
-      <CommonExploreButton @click-button="onSubmit"/>
+      <CommonExploreButton @click-button="onSubmit" />
     </div>
   </div>
 </template>

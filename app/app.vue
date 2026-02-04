@@ -1,11 +1,10 @@
 <template>
   <NuxtLayout />
   <NuxtPage />
-<!--  <div class="w-screen max-w-[1920px] flex justify-center">-->
-<!--    <NuxtLayout />-->
-<!--    <NuxtPage />-->
-<!--  </div>-->
 </template>
+
+<script setup lang="ts">
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap');
@@ -59,5 +58,3 @@ input {
   display: none;
 }
 </style>
-<script setup lang="ts">
-</script>

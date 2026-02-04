@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import type {Ref} from "vue";
-import { useRouter } from 'vue-router';
+import type { Ref } from 'vue';
 
 interface Sections {
   home: Ref<HTMLElement | null>;
@@ -11,7 +10,6 @@ interface Sections {
   contactMe: Ref<HTMLElement | null>;
 }
 const darkMode = ref(false);
-const router = useRouter();
 const sections: Sections = {
   home: ref(null),
   businessJourney: ref(null),
@@ -29,20 +27,23 @@ const toggleColorMode = () => {
   if (darkMode.value) {
     document.documentElement.classList.add('dark');
   } else {
-    document.documentElement.classList.remove('dark')
+    document.documentElement.classList.remove('dark');
   }
-}
-const handleOpenImage = (event: {path: string}) => {
+};
+const handleOpenImage = (event: { path: string }) => {
   openModal.value = true;
   imageUrl.value = event.path;
   noHeader.value = true;
-}
-
+};
 </script>
 
 <template>
-  <div class="flex flex-col mob:pt-[60px] pt-[108px] items-center justify-center mob:overflow-hidden">
-    <div :ref="sections.home" id="home" class="pt-[108px] w-full bg-[#F6F9FA] dark:bg-[url('~/assets/images/background.jpg')] flex justify-center flex-col hero-section">
+  <div class="flex flex-col mob:pt-6 pt-24 items-center justify-center mob:overflow-hidden">
+    <div
+      id="home"
+      :ref="sections.home"
+      class="pt-24 w-full bg-[#F6F9FA] dark:bg-[url('~/assets/images/background.jpg')] flex justify-center flex-col hero-section"
+    >
       <div class="w-full flex justify-center">
         <Homepage class="max-w-[1920px] mob:max-w-[360px] w-full" />
       </div>
@@ -50,33 +51,54 @@ const handleOpenImage = (event: {path: string}) => {
         <MyWorld class="max-w-[1920px] mob:max-w-[360px] w-full" />
       </div>
     </div>
-    <div :ref="sections.businessJourney" class="journey-section bg-[#F6F9FA] dark:bg-[#171717] flex w-full justify-center" id="business-journey">
+    <div
+      id="business-journey"
+      :ref="sections.businessJourney"
+      class="journey-section bg-[#F6F9FA] dark:bg-[#171717] flex w-full justify-center"
+    >
       <Journey class="max-w-[1920px] mob:max-w-[360px] w-full" />
     </div>
-    <div :ref="sections.about" class="about-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center" id="about">
+    <div
+      id="about"
+      :ref="sections.about"
+      class="about-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center"
+    >
       <About class="max-w-[1920px] mob:max-w-[360px] w-full" />
     </div>
-    <div :ref="sections.shortHistory" class="history-section bg-[#F6F9FA] dark:bg-[#171717] w-full flex justify-center" id="short-history">
+    <div
+      :ref="sections.shortHistory"
+      class="history-section bg-[#F6F9FA] dark:bg-[#171717] w-full flex justify-center"
+    >
       <History class="max-w-[1920px] mob:max-w-[360px] w-full" />
     </div>
-    <div :ref="sections.gallery" class="gallery-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center" id="gallery">
+    <div
+      :ref="sections.gallery"
+      class="gallery-section bg-[#FFFFFF] dark:bg-black w-full flex justify-center"
+    >
       <Gallery
-          class="max-w-[1920px] mob:max-w-[360px] w-full"
-          @open-image="handleOpenImage"
+        class="max-w-[1920px] mob:max-w-[360px] w-full"
+        @open-image="handleOpenImage"
       />
     </div>
-    <div :ref="sections.contactMe" class="bg-[#F6F9FA] flex-col dark:bg-cover dark:bg-[url('~/assets/images/background2.png')] w-full flex justify-center items-center" id="contact-me">
+    <div
+      id="contact-me"
+      :ref="sections.contactMe"
+      class="bg-[#F6F9FA] flex-col dark:bg-cover dark:bg-[url('~/assets/images/background2.png')] w-full flex justify-center items-center"
+    >
       <Contact class="max-w-[1920px] mob:max-w-[360px] w-full" />
       <div class="footer-section bg-[#FFFFFF] dark:bg-transparent w-full flex justify-center">
-        <Footer class="max-w-[1920px] mob:max-w-[360px] w-full" @toggle-dark-mode="toggleColorMode" />
+        <Footer
+          class="max-w-[1920px] mob:max-w-[360px] w-full"
+          @toggle-dark-mode="toggleColorMode"
+        />
       </div>
     </div>
     <CommonModal
-        v-if="openModal"
-        v-model="openModal"
-        :no-header="noHeader"
-        :header-text="headerText"
-        :image-url="imageUrl"
+      v-if="openModal"
+      v-model="openModal"
+      :no-header="noHeader"
+      :header-text="headerText"
+      :image-url="imageUrl"
     />
   </div>
 </template>

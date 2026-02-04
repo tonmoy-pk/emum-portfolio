@@ -3,9 +3,9 @@ import 'animate.css';
 </script>
 
 <template>
-  <div class="flex relative gap-[100px] homepage-body-container px-[240px] py-[32px] desk1:px-[140px] mob:px-[16px] mob:py-[64px] mob:flex-col mob:gap-[32px]">
-    <div class="mob:hidden tab:hidden desk3:hidden desk2:hidden icon-container absolute left-[7.5rem] top-[330px]">
-      <ul class="flex gap-[24px] flex-col items-center">
+  <div class="flex relative homepage-body-container desk1:px-32 px-12 py-8 mob:px-4 mob:py-16 mob:flex-col mob:gap-8">
+    <div class="mob:hidden tab:hidden desk3:hidden icon-container absolute left-24 top-48">
+      <ul class="flex gap-8 flex-col items-center">
         <li class="svg-arrow">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -119,36 +119,55 @@ import 'animate.css';
         </li>
       </ul>
     </div>
-    <div class="img-animation w-auto h-auto flex desk1:h-[800px] desk1:w-[736px] desk2:h-[711px] desk2:w-[654px] desk3:h-[622px] desk3:w-[572px] tab:w-[491px] tab:h-[533px] mob:w-[291px] mob:h-[315px]">
-      <img
-        src="../assets/images/emam1.png"
-        alt="Loading..."
-        class="w-[100%] h-[100%]"
-      >
-    </div>
-    <div class="flex justify-center flex-col items-start gap-[32px] mob:gap-[12px] py-[16px] dark:text-[#D7D8DD]">
-      <div class="font-normal text-[40px] mob:text-[30px] mob:leading-[36px]">
-<!--        Hello! 👋  World,  I am-->
-        Hello! <img src="../assets/images/waving-hand-sign_1f44b.png" alt="loading..." class="hello-world w-[60px] h-[50px] px-1 inline-block"/> world, I am
+    <div class="grid grid-cols-2 mob:grid-cols-1 desk1:gap-24 gap-6 ">
+      <div class="img-animation w-auto h-auto flex">
+        <img
+          src="../assets/images/emam1.png"
+          alt="Loading..."
+          class="w-[100%] h-[100%]"
+        >
       </div>
-      <div class="my-element">
-        <span class="title-name text-[180px] leading-[130px] mob:text-[100px] mob:leading-[70px] font-bold">Emam</span><br><span class="title-surname text-[145px] mob:text-[80px] mob:leading-[70px] leading-[130px] font-bold">Hossain</span>
-      </div>
-      <div class="font-bold text-[24px] mob:text-[20px] mob:leading-[28px] italic leading-[32px] dark:text-[#D7D8DD] text-[#565656]">
-        I am a Businessman
-      </div>
-      <div class="flex flex-col gap-[32px]">
-        <div class="dark:text-[#D7D8DD] text-[#565656] max-w-[514px] text-[20px] mob:text-[16px] mob:leading-[24px] font-normal not-italic leading-[28px]">
-          "Success is forged through innovation and resilience.
-          In the ever-changing business landscape, adaptability is the key to sustained growth."
+      <div class="flex justify-center flex-col items-start gap-4 mob:gap-1.5 py-2 dark:text-[#D7D8DD]">
+        <div class="font-rouge font-medium text-5xl mob:text-2xl mob:leading-8">
+          <span>
+            Hello!
+          </span>
+          <img
+            src="../assets/images/waving-hand-sign_1f44b.png"
+            alt="loading..."
+            class="hello-world w-14 h-12 px-1 inline-block"
+          >
+          <span> world, I am</span>
         </div>
-        <div>
-          <button class="hover:bg-blue-700 hover:text-white hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-in-out dark:border-[#D7D8DD] flex mob:px-[24px] mob:py-[12px] gap-[10px] items-center border-solid border-[.5px] border-[#262626] font-normal text-[20px] leading-[28px] px-[40px] py-[16px]">
-            <span class="text-[20px] leading-[16px]">Contact Me</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-              <path class="dark:fill-[#D7D8DD]" d="M4.00016 4.875V6.20833H9.72683L3.3335 12.6017L4.2735 13.5417L10.6668 7.14833V12.875H12.0002V4.875H4.00016Z" fill="#262626"/>
-            </svg>
-          </button>
+        <div class="my-element grid grid-cols-1 mob:grid-cols-2 gap-0">
+          <span class="title-name font-smooch text-9xl leading-12 mob:text-5xl mob:leading-8 font-bold">Emam</span><span class="title-surname font-smooch text-9xl mob:text-5xl mob:leading-8 leading-12 font-bold">Hossain</span>
+        </div>
+        <div class="font-smooch font-semibold text-2xl mob:text-lg mob:leading-7 leading-8 dark:text-[#D7D8DD] text-[#565656]">
+          I am a Businessman
+        </div>
+        <div class="flex flex-col gap-8 w-full">
+          <div class="dark:text-[#D7D8DD] text-[#565656] font-smooch w-full text-xl mob:text-base mob:leading-4 font-normal leading-6">
+            "Success is forged through innovation and resilience.
+            In the ever-changing business landscape, adaptability is the key to sustained growth."
+          </div>
+          <div>
+            <button class="homepage-contact-button hover:bg-blue-700 hover:text-white hover:scale-105 hover:shadow-lg transition-transform duration-200 ease-in-out dark:border-[#D7D8DD] flex mob:px-[24px] mob:py-[12px] gap-[10px] items-center border-solid border-[.5px] border-[#262626] font-normal text-[20px] leading-[28px] px-[40px] py-[16px]">
+              <span class="text-[20px] leading-[16px]">Contact Me</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                class=""
+              >
+                <path
+                  class="svg-fill dark:fill-[#D7D8DD]"
+                  d="M4.00016 4.875V6.20833H9.72683L3.3335 12.6017L4.2735 13.5417L10.6668 7.14833V12.875H12.0002V4.875H4.00016Z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -163,9 +182,6 @@ import 'animate.css';
   color: #1976d2; /* Change text color to blue on hover */
 }
 .my-element {
-  display: inline-block;
-  margin: 0 0.5rem;
-
   animation: zoomInDown;
   animation-duration: 2s;
 }
@@ -191,5 +207,15 @@ import 'animate.css';
 }
 .linked-in {
   background: white;
+}
+
+/* SVG path initial state and hover state */
+.homepage-contact-button .svg-fill {
+  fill: #262626; /* initial fill color */
+  transition: fill 160ms ease-in-out;
+}
+
+.homepage-contact-button:hover .svg-fill {
+  fill: #D7D8DD; /* hover fill color */
 }
 </style>

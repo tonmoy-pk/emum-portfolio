@@ -1,43 +1,54 @@
 <script setup lang="ts">
-const emit = defineEmits(['closeModal', 'confirm']);
 interface Props {
   noHeader?: boolean;
   headerText?: string;
   imageUrl?: string;
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   noHeader: false,
-  headerText: 'This is a default message',
+  headerText: 'This is a default message'
 });
-const openModal = defineModel();
 
-const showModal = ref(false);
+const isOpen = defineModel<boolean>({ default: false });
 
 function closeModal() {
-  showModal.value = false;
+  isOpen.value = false;
 }
 </script>
 
 <template>
   <div class="modal-overlay">
     <div
-        class="modal-content dark:bg-gray-900 bg-white flex flex-col justify-center items-center gap-6 px-8 py-10 dark:text-white"
-        @click.stop
+      class="modal-content dark:bg-gray-900 bg-white flex flex-col justify-center items-center gap-6 px-8 py-10 dark:text-white"
+      @click.stop
     >
       <div class="relative w-full">
         <span
-            class="close-button"
-            @click="openModal = false"
+          class="close-button"
+          @click="closeModal"
         >
           x
         </span>
       </div>
-      <h3 v-if="!noHeader" class="modal-header">{{ headerText }}</h3>
-      <p v-if="!imageUrl" class="modal-body">
+      <h3
+        v-if="!noHeader"
+        class="modal-header"
+      >
+        {{ headerText }}
+      </h3>
+      <p
+        v-if="!imageUrl"
+        class="modal-body"
+      >
         Lorem ipsum dolor sit amet, consectetur adipisicing elit...
       </p>
-      <img v-if="imageUrl" :src="imageUrl" alt="Image" class="rounded" />
+      <img
+        v-if="imageUrl"
+        :src="imageUrl"
+        alt="Image"
+        class="rounded"
+      >
     </div>
   </div>
 </template>

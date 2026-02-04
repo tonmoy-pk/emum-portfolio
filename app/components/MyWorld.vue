@@ -3,23 +3,23 @@
 </script>
 
 <template>
-  <div class="flex items-center justify-center mob:py-[64px] mob:px-[16px] mob:gap-[32px] gap-[48px] flex-col py-[120px]">
-    <div class="flex justify-center items-center flex-col gap-[16px] mob:gap-[12px] mob:px-[16px]">
-      <div class="flex gap-[24px] items-center mob:items-start mob:gap-[12px] mob:py-[16px]">
+  <div class="flex items-center justify-center mob:py-16 mob:px-4 mob:gap-8 gap-12 flex-col py-32 px-12">
+    <div class="flex justify-center items-center flex-col gap-4 mob:gap-3">
+      <div class="flex gap-6 items-center mob:items-start mob:gap-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"
           height="24"
           viewBox="0 0 25 24"
           fill="none"
-          class="mob:h-[16px] mob:w-[16px]"
+          class="mob:h-4 mob:w-4"
         >
           <path
             d="M24.375 24L0.801777 24C0.690414 24 0.634642 23.8654 0.713388 23.7866L24.2866 0.213387C24.3654 0.134643 24.5 0.190411 24.5 0.301776L24.5 23.875C24.5 23.944 24.444 24 24.375 24Z"
             fill="#147CD1"
           />
         </svg>
-        <h1 class="dark:text-[#D7D8DD] text-[48px] mob:text-center mob:text-[30px] mob:h-[64px] mob:leading-[36px] font-bold leading-[64px] text-[#262626] mob:w-[225px] mob:mt-[-6px]">
+        <h1 class="dark:text-[#D7D8DD] text-5xl mob:text-center mob:text-3xl mob:h-16 mob:leading-8 font-bold leading-12 text-[#262626] mob:w-sm mob:mt-[-6px]">
           Welcome To My World
         </h1>
         <svg
@@ -28,7 +28,7 @@
           height="24"
           viewBox="0 0 25 24"
           fill="none"
-          class="mob:h-[16px] mob:w-[16px]"
+          class="mob:h-4 mob:w-4"
         >
           <path
             d="M0.5 23.875V0.301777C0.5 0.190414 0.634642 0.134642 0.713388 0.213388L24.2866 23.7866C24.3654 23.8654 24.3096 24 24.1982 24H0.625C0.555964 24 0.5 23.944 0.5 23.875Z"
@@ -36,14 +36,14 @@
           />
         </svg>
       </div>
-      <p class="dark:text-[#D7D8DD] max-w-[1118px] text-center text-[24px] mob:text-[16px] mob:leading-[24px] font-light leading-[32px] text-[#565656]">
+      <p class="dark:text-[#D7D8DD] max-w-5xl text-center text-2xl mob:text-base mob:leading-6 font-light leading-8 text-[#565656]">
         Efficiency and precision are the cornerstone of a successful workflow,
         where collaboration and dedication intertwine to achieve outstanding results
       </p>
     </div>
-    <div class="flex mob:flex-col justify-center px-[240px] mob:px-[16px] gap-[24px]">
-      <div class="border-solid border-2 border-[#AFAFAF] w-[464px] mob:w-auto">
-        <div class="p-[40px] gap-[24px] flex flex-col mob:px-[16px] mob:py-[24px] mob:gap-[16px]">
+    <div class="grid grid-cols-3 mob:grid-cols-1 tab:grid-cols-1 px-32 mob:px-4 gap-6">
+      <div class="border-solid border-2 border-[#AFAFAF] w-auto">
+        <div class="p-8 gap-6 flex flex-col mob:px-4 mob:py-6 mob:gap-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="64"
@@ -60,17 +60,17 @@
               stroke-linejoin="round"
             />
           </svg>
-          <p class="text-[40px] font-bold leading-[32px] text-[#262626] mob:text-[24px] dark:text-[#D7D8DD]">
+          <p class="text-5xl font-smooch font-bold leading-8 text-[#262626] mob:text-2xl dark:text-[#D7D8DD]">
             Creativity
           </p>
-          <p class="text-[24px] leading-[32px] text-[#565656] mob:text-[16px] mob:leading-[24px] dark:text-[#D7D8DD]">
+          <p class="text-2xl leading-8 text-[#565656] mob:text-base mob:leading-6 font-smooch dark:text-[#D7D8DD]">
             A businessman's creativity shines through in their capacity to ideate inventive strategies,
             navigating market dynamics with imaginative problem-solving for business growth.
           </p>
         </div>
       </div>
-      <div class="border-solid border-2 border-[#AFAFAF] w-[464px] mob:w-auto">
-        <div class="p-[40px] gap-[24px] flex flex-col mob:px-[16px] mob:py-[24px] mob:gap-[16px]">
+      <div class="border-solid border-2 border-[#AFAFAF] w-auto">
+        <div class="p-8 gap-6 flex flex-col mob:px-4 mob:py-6 mob:gap-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="64"
@@ -87,17 +87,17 @@
               stroke-linejoin="round"
             />
           </svg>
-          <p class="text-[40px] font-bold leading-[32px] text-[#262626] mob:text-[24px] dark:text-[#D7D8DD]">
+          <p class="text-5xl font-smooch font-bold leading-8 text-[#262626] mob:text-2xl dark:text-[#D7D8DD]">
             Dedication
           </p>
-          <p class="text-[24px] leading-[32px] text-[#565656] mob:text-[16px] mob:leading-[24px] dark:text-[#D7D8DD]">
+          <p class="text-2xl leading-8 text-[#565656] mob:text-base mob:leading-6 font-smooch dark:text-[#D7D8DD]">
             A businessman's dedication is exemplified through tireless efforts, long hours,
             and an unwavering commitment to the success and growth of their enterprise.
           </p>
         </div>
       </div>
-      <div class="border-solid border-2 border-[#AFAFAF] w-[464px] mob:w-auto">
-        <div class="p-[40px] gap-[24px] flex flex-col mob:px-[16px] mob:py-[24px] mob:gap-[16px]">
+      <div class="border-solid border-2 border-[#AFAFAF] w-auto">
+        <div class="p-8 gap-6 flex flex-col mob:px-4 mob:py-6 mob:gap-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="64"
@@ -114,10 +114,10 @@
               stroke-linejoin="round"
             />
           </svg>
-          <p class="text-[40px] font-bold leading-[32px] text-[#262626] mob:text-[24px] dark:text-[#D7D8DD]">
+          <p class="text-5xl font-smooch font-bold leading-8 text-[#262626] mob:text-2xl dark:text-[#D7D8DD]">
             Hard Work
           </p>
-          <p class="text-[24px] leading-[32px] text-[#565656] mob:text-[16px] mob:leading-[24px] dark:text-[#D7D8DD]">
+          <p class="text-2xl leading-8 text-[#565656] mob:text-base mob:leading-6 font-smooch dark:text-[#D7D8DD]">
             Hard work is cornerstone of a businessman's success, embodying persistent effort,
             resilience in adversity, an unyielding commitment to achieving & exceeding business objectives.
           </p>
